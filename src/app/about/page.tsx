@@ -1,9 +1,7 @@
-import BasePage from "@/components/BasePage";
-
 export default function About() {
     return (
       <section className="flex flex-col items-center justify-center min-h-screen text-center p-6">
-          <h2 className="text-4xl font-bold text-center mb-12">About Me!</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">About Me! (Under construction)</h2>
           <p>
               Hi, I&#39;m David Kan, a second-year student at the University of Georgia persuing a B.S. in Computer Science,
               a Minor in Business and a Financial Technology (FinTech) Certificate. I&#39;ve gained hands-on experience in

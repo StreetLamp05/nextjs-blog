@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploy only when pushing to main
+      - main  # Deploy when pushing to main
 
 permissions:
   contents: write  # Required to push to gh-pages
@@ -24,14 +24,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Next.js and Export Static Files
-        run: |
-          npm run build
-          npm run export
+      - name: Build Next.js
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out  # Deploys the `out/` folder created by `next export`
+          folder: out  # Next.js now automatically outputs static files here
           clean: true

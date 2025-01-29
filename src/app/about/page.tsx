@@ -1,5 +1,3 @@
-import BasePage from "@/components/BasePage";
-
 export default function About() {
     return (
       <section className="flex flex-col items-center justify-center min-h-screen text-center p-6">
